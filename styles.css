@@ -1,86 +1,165 @@
-/* ==================== Fonts ==================== */
+/* Fonts */
 @font-face {
     font-family: 'Gelio Fasolada';
-    src: url('../fonts/GelioFasolada.ttf') format('truetype');
+    src: url('../fonts/Gelio Fasolada.ttf') format('truetype');
   }
   
   @font-face {
-    font-family: 'Romanica';
-    src: url('../fonts/Romanica.ttf') format('truetype');
+    font-family: 'Caviar Dreams';
+    src: url('../fonts/CaviarDreams.ttf') format('truetype');
   }
   
-  /* ==================== Root Vars ==================== */
+  /* Root Variables */
   :root {
-    --blue-primary: #68A2FF;
+    --primary-blue: #68A2FF;
     --white: #FFFFFF;
-    --blue-light: #BAE2FF;
+    --highlight-blue: #98D4FF;
+    --dark-text: #333;
   }
   
-  /* ==================== Base Styles ==================== */
+  /* Base Styles */
   body {
-    font-family: 'Romanica', serif;
+    font-family: 'Caviar Dreams', serif;
     background-color: var(--white);
-    color: #000;
+    color: var(--dark-text);
+    margin: 0;
+    padding: 0;
   }
   
-  h1, h2, h3, header p {
+  /* Typography */
+  h1, h2, h3, header p, button, .btn {
     font-family: 'Gelio Fasolada', serif;
   }
   
+  /* Links */
   a {
     text-decoration: none;
-    color: var(--blue-primary);
+    color: var(--primary-blue);
+    transition: color 0.3s ease;
   }
   
-  button, .btn {
-    font-family: 'Gelio Fasolada', serif;
+  a:hover {
+    color: var(--highlight-blue);
   }
   
-  /* ==================== Layout ==================== */
+  /* Header & Footer */
   header, footer {
-    background-color: var(--blue-primary);
+    background-color: var(--primary-blue);
+    color: var(--white);
+  }
+  
+  header {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
   }
   
   footer {
+    font-family: 'Gelio Fasolada', serif;
     font-size: 0.9rem;
+    padding: 1rem 0;
   }
   
-  /* ==================== Forms ==================== */
+  /* Main Content */
+  main {
+    min-height: calc(100vh - 200px);
+  }
+  
+  /* Form */
   input.form-control {
-    border-radius: 8px;
-    border: 1px solid var(--blue-primary);
-    padding: 0.6rem;
+    text-align: center;
+    border-radius: 10px;
+    border: 2px solid var(--primary-blue);
+    padding: 0.8rem;
     font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
   }
   
-  /* ==================== Cards ==================== */
+  input.form-control:focus {
+    border-color: var(--highlight-blue);
+    box-shadow: 0 0 5px var(--highlight-blue), 0 0 10px var(--highlight-blue), 0 0 15px var(--highlight-blue);
+    outline: none;
+  }
+  
+  /* Buttons */
+  .btn-primary {
+    background-color: var(--white);
+    border-color: var(--white);
+    color: var(--primary-blue);
+    border-radius: 10px;
+    padding: 0.6rem 2rem;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--highlight-blue);
+    border-color: var(--highlight-blue);
+    color: var(--white);
+    transform: scale(1.05);
+    box-shadow: none;
+  }
+  
+  /* Card */
   .card {
-    background-color: var(--blue-light);
-    border: none;
+    background-color: var(--primary-blue);
     border-radius: 15px;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
   }
   
-  /* ==================== Typography ==================== */
-  .display-4 {
-    font-weight: 700;
-    letter-spacing: 1px;
+  /* Track Spotlight */
+  #track-results h3 {
+    color: var(--primary-blue);
+    font-weight: bold;
+    font-size: 2.2rem;
   }
   
-  .lead {
+  /* Track Artwork */
+  #track-artwork {
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Audio Player */
+  audio {
+    border-radius: 10px;
+    width: 100%;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    h1.display-1 {
+      font-size: 3rem;
+    }
+  
+    .lead {
+      font-size: 1rem;
+    }
+  
+    #track-results h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  .text-center.mb-2.text-white {
     font-size: 1.2rem;
   }
-  
-  /* ==================== Compatibility Result ==================== */
-  #compatibility-result {
-    font-size: 1.3rem;
-    font-weight: bold;
+
+  /* Find Track Button */
+  .btn-find-track {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 0.6rem 2rem;
+    transition: all 0.3s ease;
   }
-  
-  /* ==================== Utilities ==================== */
-  .text-center {
-    text-align: center;
-  }
-  
-  .text-white {
-    color: #fff;
+
+  .btn-find-track:hover {
+    background-color: var(--highlight-blue);
+    border-color: var(--highlight-blue);
+    color: var(--white);
+    transform: scale(1.05);
+    box-shadow: none;
   }
