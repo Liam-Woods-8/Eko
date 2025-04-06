@@ -24,6 +24,9 @@
     color: var(--dark-text);
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
   }
   
   /* Typography */
@@ -55,13 +58,17 @@
   
   footer {
     font-family: 'Gelio Fasolada', serif;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   /* Main Content */
   main {
     min-height: calc(100vh - 200px);
+    flex: 1;
   }
   
   /* Form */
@@ -162,4 +169,15 @@
     color: var(--white);
     transform: scale(1.05);
     box-shadow: none;
+  }
+
+  footer .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Adjust spacing between icons as needed */
+    margin-top: 10px; /* Add some space between the text and icons */
+  }
+
+  footer .social-icons a {
+    font-size: 1.5rem; /* Adjust icon size as needed */
   }
