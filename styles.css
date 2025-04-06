@@ -1,0 +1,86 @@
+/* ==================== Fonts ==================== */
+@font-face {
+    font-family: 'Gelio Fasolada';
+    src: url('../fonts/GelioFasolada.ttf') format('truetype');
+  }
+  
+  @font-face {
+    font-family: 'Romanica';
+    src: url('../fonts/Romanica.ttf') format('truetype');
+  }
+  
+  /* ==================== Root Vars ==================== */
+  :root {
+    --blue-primary: #68A2FF;
+    --white: #FFFFFF;
+    --blue-light: #BAE2FF;
+  }
+  
+  /* ==================== Base Styles ==================== */
+  body {
+    font-family: 'Romanica', serif;
+    background-color: var(--white);
+    color: #000;
+  }
+  
+  h1, h2, h3, header p {
+    font-family: 'Gelio Fasolada', serif;
+  }
+  
+  a {
+    text-decoration: none;
+    color: var(--blue-primary);
+  }
+  
+  button, .btn {
+    font-family: 'Gelio Fasolada', serif;
+  }
+  
+  /* ==================== Layout ==================== */
+  header, footer {
+    background-color: var(--blue-primary);
+  }
+  
+  footer {
+    font-size: 0.9rem;
+  }
+  
+  /* ==================== Forms ==================== */
+  input.form-control {
+    border-radius: 8px;
+    border: 1px solid var(--blue-primary);
+    padding: 0.6rem;
+    font-size: 1rem;
+  }
+  
+  /* ==================== Cards ==================== */
+  .card {
+    background-color: var(--blue-light);
+    border: none;
+    border-radius: 15px;
+  }
+  
+  /* ==================== Typography ==================== */
+  .display-4 {
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .lead {
+    font-size: 1.2rem;
+  }
+  
+  /* ==================== Compatibility Result ==================== */
+  #compatibility-result {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  /* ==================== Utilities ==================== */
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-white {
+    color: #fff;
+  }

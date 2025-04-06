@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eko</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <!-- Header -->
+  <header class="bg-primary text-white text-center py-4">
+    <h1 class="display-4">Eko</h1>
+    <p class="lead">Mix Smarter. Blend Better.</p>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container my-5 flex-grow-1">
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <!-- Song Compare Form -->
+        <form id="compare-form" class="row g-3 mb-4">
+          <div class="col-md-6">
+            <input type="text" id="song1-input" class="form-control" placeholder="Enter first song..." required />
+          </div>
+          <div class="col-md-6">
+            <input type="text" id="song2-input" class="form-control" placeholder="Enter second song..." required />
+          </div>
+          <div class="col-12 text-center">
+            <button class="btn btn-primary px-5" type="submit">Compare</button>
+          </div>
+        </form>
+
+        <!-- Results Section -->
+        <div id="comparison-results" class="row d-none">
+          <!-- Song 1 -->
+          <div class="col-md-6">
+            <div class="card p-4 shadow-sm mb-3">
+              <h4 class="text-center mb-3">Song 1</h4>
+              <p><strong>Title:</strong> <span id="title-1"></span></p>
+              <p><strong>Artist:</strong> <span id="artist-1"></span></p>
+              <p><strong>Genre:</strong> <span id="genre-1"></span></p>
+              <p><strong>BPM:</strong> <span id="bpm-1"></span></p>
+              <p><strong>Key:</strong> <span id="key-1"></span></p>
+              <p><strong>Energy:</strong> <span id="energy-1"></span></p>
+            </div>
+          </div>
+
+          <!-- Song 2 -->
+          <div class="col-md-6">
+            <div class="card p-4 shadow-sm mb-3">
+              <h4 class="text-center mb-3">Song 2</h4>
+              <p><strong>Title:</strong> <span id="title-2"></span></p>
+              <p><strong>Artist:</strong> <span id="artist-2"></span></p>
+              <p><strong>Genre:</strong> <span id="genre-2"></span></p>
+              <p><strong>BPM:</strong> <span id="bpm-2"></span></p>
+              <p><strong>Key:</strong> <span id="key-2"></span></p>
+              <p><strong>Energy:</strong> <span id="energy-2"></span></p>
+            </div>
+          </div>
+
+          <!-- Compatibility Summary -->
+          <div class="col-12">
+            <div class="alert alert-info text-center">
+              <strong>Compatibility:</strong> <span id="compatibility-result">Waiting for analysis...</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-primary text-white text-center py-3">
+    <small>Created by Liam Woods | Eko Project</small>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
