@@ -1,12 +1,12 @@
 /* Fonts */
 @font-face {
     font-family: 'Gelio Fasolada';
-    src: url('../fonts/Gelio%20Fasolada.ttf') format('truetype');
+    src: url('/Gelio Fasolada.ttf') format('truetype');
   }
   
   @font-face {
     font-family: 'Caviar Dreams';
-    src: url('../fonts/CaviarDreams.ttf') format('truetype');
+    src: url('/CaviarDreams.ttf') format('truetype');
   }
   
   /* Root Variables */
